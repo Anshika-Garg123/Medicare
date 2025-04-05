@@ -6,12 +6,12 @@ const Navbar = () => {
 
     const navigate = useNavigate();
 
-    //const [showMenu, setShowMenu] = useState(false) //
+    const [showMenu, setShowMenu] = useState(false) 
     const [token, setToken] = useState(true)
 
   return (
     <nav className="flex items-center justify-between p-4 shadow-md bg-white">
-        <img src={assets.logo} alt="Logo" className="w-24" />
+        <img onClick={()=>navigate('/')} className="w-14 cursor-pointer" src={assets.logo} alt="Logo" />
         <ul className="flex space-x-6">
             <li>
                 <NavLink to="/" className={({ isActive }) => isActive ? 'text-blue-500 font-semibold' : 'text-gray-700'}>
@@ -53,6 +53,7 @@ const Navbar = () => {
             
         </div>
     </nav>
+    
   );
 }
 
