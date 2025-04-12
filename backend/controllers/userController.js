@@ -15,7 +15,7 @@ const razorpayInstance = new razorpay({
     key_secret: process.env.RAZORPAY_KEY_SECRET,
 })
 
-// API to register user
+// API to register user 
 const registerUser = async (req, res) => {
 
     try {
